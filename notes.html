@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Notes</title>
+  <link rel="stylesheet" href="notes.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo">🎬 My MovieBox</div>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="notes.html">Notes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button id="themeToggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+  </header>
+
+  <main class="notes-container">
+    <h1>🎬 Personal Movie Notes</h1>
+
+    <label for="movieSelect">Choose a movie:</label>
+    <select id="movieSelect">
+      <option value="Inception">Inception</option>
+      <option value="The Dark Knight">The Dark Knight</option>
+      <option value="Interstellar">Interstellar</option>
+    </select>
+
+    <label for="movieNote">Your Note:</label>
+    <textarea id="movieNote" rows="5" placeholder="Write your thoughts..."></textarea>
+
+    <button onclick="saveNote()">💾 Save Note</button>
+
+    <h2>📚 Saved Notes</h2>
+    <ul id="notesList"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Crafted with ❤️</strong> Made by Jexan Joel & Smrithi</p>
+    <p>© 2025 My MovieBox</p>
+  </footer>
+
+  <script src="notes.js"></script>
+</body>
+</html>

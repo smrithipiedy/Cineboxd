@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Browse Movies | My MovieBox</title>
+  <link rel="stylesheet" href="browse.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="logo">🎬 My MovieBox</div>
+    <button class="menu-toggle" id="menuToggle">&#9776;</button>
+    <nav id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="browse.html">Browse</a>
+      <a href="watchlist.html">Watchlist</a>
+      <a href="notes.html">Notes</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <button id="themeToggle">🌙</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Browse Movies</h1>
+    <p>Discover your favorite films</p>
+    <input type="text" id="searchInput" placeholder="Search by Title...">
+  </section>
+
+  <section class="tools-grid" id="movieGrid">
+    <div class="tool-card">
+      <img src="images/inception.jpeg" alt="Inception">
+      <h3>Inception (2010)</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <button onclick="addToWatchlist('Inception', 'images/inception.jpeg')">Add to Watchlist</button>
+    </div>
+    <div class="tool-card">
+      <img src="images/interstellar.webp" alt="Interstellar">
+      <h3>Interstellar (2014)</h3>
+      <p>⭐⭐⭐⭐</p>
+      <button onclick="addToWatchlist('Interstellar', 'images/interstellar.webp')">Add to Watchlist</button>
+    </div>
+    <div class="tool-card">
+      <img src="images/dark-knight.jpeg" alt="The Dark Knight">
+      <h3>The Dark Knight (2008)</h3>
+      <p>⭐⭐⭐⭐⭐</p>
+      <button onclick="addToWatchlist('The Dark Knight', 'images/dark-knight.jpeg')">Add to Watchlist</button>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>Crafted with ❤️. Made by <strong>Jexan Joel</strong> & <strong>Smrithi</strong></p>
+    <p>© 2025 My MovieBox</p>
+  </footer>
+
+  <script>
+    const themeToggle = document.getElementById('themeToggle');
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+
+    const searchInput = document.getElementById('searchInput');
+    const cards = document.querySelectorAll('.tool-card');
+
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(query) ? 'flex' : 'none';
+      });
+    });
+    function addToWatchlist(title, poster) {
+    let watchlist = JSON.parse(localStorage.getItem('watchlist')) || [];
+
+    const exists = watchlist.some(movie => movie.title === title);
+    if (!exists) {
+      watchlist.push({ title, poster });
+      localStorage.setItem('watchlist', JSON.stringify(watchlist));
+      alert(`${title} added to your watchlist!`);
+    } else {
+      alert(`${title} is already in your watchlist.`);
+    }
+  }
+  </script>
+
+</body>
+</html>
