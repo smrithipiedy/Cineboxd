@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Browse Movies | My MovieBox</title>
-  <link rel="stylesheet" href="browse.css" />
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
@@ -29,20 +29,55 @@
     <h1>Browse Movies</h1>
     <p>Discover your favorite films and add them to your collection</p>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="🔍 Search by movie title...">
+      <input type="text" id="searchInput" placeholder="🔍 Search by movie title..." style="width: 400px;">
     </div>
   </section>
 
   <section class="tools-grid" id="movieGrid">
-    <div class="tool-card" data-movie="inception">
-      <img src="images/inception.jpeg" alt="Inception" loading="lazy">
+    <div class="tool-card" data-movie="pulp-fiction">
+      <img src="images/pulp-fiction.png" alt="Pulp Fiction" loading="lazy">
       <div class="card-content">
-        <h3>Inception (2010)</h3>
+        <h3>Pulp Fiction (1994)</h3>
         <div class="rating">⭐⭐⭐⭐⭐</div>
-        <p class="genre">Sci-Fi • Thriller • Action</p>
-        <button onclick="addToWatchlist('Inception', 'images/inception.jpeg')" class="watchlist-btn">
+        <p class="genre">Crime • Drama • Thriller</p>
+        <button onclick="addToWatchlist('Pulp Fiction', 'images/pulp-fiction.png')" class="watchlist-btn">
           <span class="btn-text">Add to Watchlist</span>
-          <span class="btn-icon">📋</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tool-card" data-movie="dark-knight">
+      <img src="images/dark-knight.png" alt="The Dark Knight" loading="lazy">
+      <div class="card-content">
+        <h3>The Dark Knight (2008)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Action • Crime • Drama</p>
+        <button onclick="addToWatchlist('The Dark Knight', 'images/dark-knight.jpeg')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tool-card" data-movie="HTLAGITD">
+      <img src="images/HTLAGITD.png" alt="HTLAGITD" loading="lazy">
+      <div class="card-content">
+        <h3>How To Lose A Guy In 10 Days (2003)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Romance • Comedy</p>
+        <button onclick="addToWatchlist('How To Lose A Guy In 10 Days', 'images/HTLAGITD.png')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tool-card" data-movie="La La Land">
+      <img src="images/la-la-land.png" alt="La La Land" loading="lazy">
+      <div class="card-content">
+        <h3>La La Land (2016)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Comedy • Drama • Musical • Romance </p>
+        <button onclick="addToWatchlist('La La Land', 'images/la-la-land.png')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
         </button>
       </div>
     </div>
@@ -55,7 +90,6 @@
         <p class="genre">Action • Crime • Thriller</p>
         <button onclick="addToWatchlist('Kill Bill: Vol. 1', 'images/kill-bill-vol1.png')" class="watchlist-btn">
           <span class="btn-text">Add to Watchlist</span>
-          <span class="btn-icon">📋</span>
         </button>
       </div>
     </div>
@@ -68,43 +102,89 @@
         <p class="genre">Sci-Fi • Drama • Adventure</p>
         <button onclick="addToWatchlist('Interstellar', 'images/interstellar.webp')" class="watchlist-btn">
           <span class="btn-text">Add to Watchlist</span>
-          <span class="btn-icon">📋</span>
         </button>
       </div>
     </div>
 
-    <div class="tool-card" data-movie="pulp-fiction">
-      <img src="images/pulp-fiction.png" alt="Pulp Fiction" loading="lazy">
+    <div class="tool-card" data-movie="fight-club">
+      <img src="images/fight-club.png" alt="Fight Club" loading="lazy">
       <div class="card-content">
-        <h3>Pulp Fiction (1994)</h3>
+        <h3>Fight Club (1999)</h3>
         <div class="rating">⭐⭐⭐⭐⭐</div>
         <p class="genre">Crime • Drama • Thriller</p>
-        <button onclick="addToWatchlist('Pulp Fiction', 'images/pulp-fiction.png')" class="watchlist-btn">
+        <button onclick="addToWatchlist('Fight Club', 'images/fight-club.png')" class="watchlist-btn">
           <span class="btn-text">Add to Watchlist</span>
-          <span class="btn-icon">📋</span>
         </button>
       </div>
     </div>
 
-    <div class="tool-card" data-movie="dark-knight">
-      <img src="images/dark-knight.jpeg" alt="The Dark Knight" loading="lazy">
+    <div class="tool-card" data-movie="Barbie">
+      <img src="images/barbie.png" alt="Barbie" loading="lazy">
       <div class="card-content">
-        <h3>The Dark Knight (2008)</h3>
+        <h3>Barbie (2023)</h3>
         <div class="rating">⭐⭐⭐⭐⭐</div>
-        <p class="genre">Action • Crime • Drama</p>
-        <button onclick="addToWatchlist('The Dark Knight', 'images/dark-knight.jpeg')" class="watchlist-btn">
+        <p class="genre">Adventure • Comedy • Fantasy</p>
+        <button onclick="addToWatchlist('Barbie', 'images/barbie.png')" class="watchlist-btn">
           <span class="btn-text">Add to Watchlist</span>
-          <span class="btn-icon">📋</span>
         </button>
       </div>
     </div>
+
+    <div class="tool-card" data-movie="Oppenheimer">
+      <img src="images/oppenheimer.png" alt="Oppenheimer" loading="lazy">
+      <div class="card-content">
+        <h3>Oppenheimer (2023)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Biography • Drama • History</p>
+        <button onclick="addToWatchlist('Barbie', 'images/barbie.png')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tool-card" data-movie="The Godfather">
+      <img src="images/the-godfather.png" alt="The Godfather" loading="lazy">
+      <div class="card-content">
+        <h3>The Godfather (1972)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Crime • Drama</p>
+        <button onclick="addToWatchlist('The Godfather', 'images/the-godfather.png')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tool-card" data-movie="Devil's Advocate">
+      <img src="images/devils-advocate.png" alt="Devil's Advocate" loading="lazy">
+      <div class="card-content">
+        <h3>Devil's Advocate (1997)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Drama • Fantasy • Mystery • Thriller </p>
+        <button onclick="addToWatchlist('Devils Advocate', 'images/devils-advocate.png')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="tool-card" data-movie="inception">
+      <img src="images/inception.jpeg" alt="Inception" loading="lazy">
+      <div class="card-content">
+        <h3>Inception (2010)</h3>
+        <div class="rating">⭐⭐⭐⭐⭐</div>
+        <p class="genre">Sci-Fi • Thriller • Action</p>
+        <button onclick="addToWatchlist('Inception', 'images/inception.jpeg')" class="watchlist-btn">
+          <span class="btn-text">Add to Watchlist</span>
+        </button>
+      </div>
+    </div>
+    
   </section>
 
   <!-- Toast Notification -->
   <div id="toast" class="toast"></div>
 
   <footer class="site-footer">
-    <p>Crafted with ❤️. Made by <strong>Jexan Joel</strong> & <strong>Smrithi</strong></p>
+    <p>Crafted with ❤️ Made by <strong>Jexan Joel</strong> & <strong>Smrithi P</strong></p>
     <p>© 2025 My MovieBox</p>
   </footer>
 
