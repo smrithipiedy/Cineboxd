@@ -89,7 +89,7 @@ letterboxd-clone/
 
 ## Acknowledgments
 
-- [Letterboxd](https://letterboxd.com/) for design inspiration
+- [Letterboxd](https://letterboxd.com/) for core inspiration
 - Movie data and images from various sources
 
 ## License
