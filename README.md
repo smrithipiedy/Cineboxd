@@ -5,8 +5,7 @@ A frontend web application that recreates the core functionality of Letterboxd, 
 ## Features
 
 - **Movie Discovery**: Browse and explore different movies
-- **Responsive Design**: Works seamlessly across desktop and mobile devices
-- **Clean UI**: Modern interface inspired by Letterboxd's design
+- **Responsive & Clean UI**: Modern interface inspired by Letterboxd's design
 - **Movie Pages**: Detailed movie information and descriptions
 - **Watchlist**: Personal watchlist functionality
 - **Browse Movies**: Organized movie browsing experience
